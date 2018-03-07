@@ -21,7 +21,7 @@ public static long GetCurrentTimeUnix()
 		long startTime = GetCurrentTimeUnix();	
 		BuildPipeline.BuildPlayer(new BuildPlayerOptions(){
 			 scenes = new[]{"Assets/launcher.unity"},
-			  locationPathName = "target",
+			  locationPathName = string.Format( Application.dataPath, "../built/myapp") ,
 			   target = BuildTarget.StandaloneWindows,
 			    options = BuildOptions.None});
 
